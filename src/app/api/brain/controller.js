@@ -1,4 +1,3 @@
-// import registrationDoc from '../jobs/registrationDoc';
 import Queue from '../../lib/Queue';
 import access from "./tool/access";
 import crawler from "./tool/crawler";
@@ -97,8 +96,6 @@ const _setDataNow = async (req, res, next) => {
     res.status(200);
     return res.send(JSON.stringify({success: true, data: resData}));
 };
-
-
 
 const getController = (libs, queries) => ({
     setData: (req, res, next) => _setData(req, res, next),

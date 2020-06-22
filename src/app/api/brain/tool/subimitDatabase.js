@@ -10,9 +10,9 @@ const _submitMonitoramento = async (responseData, doc) => {
     let appRural;
     if (searchDoc[0].cont  == 0) {
          appRural = await database.execute(conn, queries.QInsertApfRural, [doc]);
-    } else {
+    }
 
-        if(responseData.length){
+    if(responseData.length){
             let dataSet = [];
             responseData.forEach(function(item){
                 let itemArray = [item.imovel, item.car, item.responsavel,item.atividade, item.municipio, item.dataEmissao,
@@ -21,7 +21,6 @@ const _submitMonitoramento = async (responseData, doc) => {
             });
 
             await database.execute(conn, queries.QInsertMonitoramento, dataSet);
-        }
     }
 }
 

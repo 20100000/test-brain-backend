@@ -3,7 +3,7 @@ const QUpdateMonitoramento = '\
   UPDATE monitoramentos \
   SET imovel = ?, car = ?, responsavel = ?, atividade = ?, municipio = ?, data_emissao = ?,\
    data_validade  = ?, data_atualizacao = ?, \
-  WHERE id_apf_rural = ?';
+  WHERE car = ?';
 const QInsertMonitoramento =`INSERT INTO monitoramentos
   (imovel, car, responsavel, atividade, municipio, data_emissao, data_validade, data_atualizacao, id_apf_rural)
   VALUES ?`;
