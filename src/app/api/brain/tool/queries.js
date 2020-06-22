@@ -17,6 +17,8 @@ const QAllSelectDoc = 'SELECT id, doc, status, data_insert FROM apf_rural';
 
 const QSelectRuralId = 'SELECT doc, status, data_insert FROM apf_rural WHERE id = ?';
 
+const QSelectIdForUser = 'SELECT id FROM apf_rural WHERE doc = ?'
+
 //JOIN Rural_Monitoramento
 const QSelectMonitoramento = '\
     SELECT ar.doc, m.imovel, m.car, m.responsavel, m.atividade, m.municipio, m.data_emissao, m.data_validade, m.data_atualizacao\
@@ -32,3 +34,4 @@ module.exports.QSelectDoc = QSelectDoc;
 module.exports.QAllSelectDoc = QAllSelectDoc;
 module.exports.QSelectRuralId = QSelectRuralId;
 module.exports.QSelectMonitoramento = QSelectMonitoramento;
+module.exports.QSelectIdForUser = QSelectIdForUser;

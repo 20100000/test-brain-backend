@@ -91,10 +91,10 @@ const _setDataNow = async (req, res, next) => {
 
     const resData = await crawler.getReturnData(responseHtml)
 
-    // const resss =  await submitDatabase.submitMonitoramento(resData, cpf)
+    const resss =  await submitDatabase.submitMonitoramento(resData, cpf)
 
     res.status(200);
-    return res.send(JSON.stringify({success: true, data: resData}));
+    return res.send(JSON.stringify({success: true, data: resss}));
 };
 
 const getController = (libs, queries) => ({
