@@ -5,7 +5,7 @@ Bull e redis para filas (queue)<br>
 Bull-board para monitoramento da fila<br>
 Docker com conterner redis <br/>
 Cheerio para crawler<br/>
-NodeJs com framework Express para rotas das APIs<br/>
+NodeJs es6 com framework Express para rotas das APIs<br/>
 yarn gerenciador de pacotes </br>
 MySql banco de dados </br>
 Fetch para Curl 
