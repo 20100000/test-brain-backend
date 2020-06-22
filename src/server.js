@@ -3,8 +3,11 @@ import express from 'express';
 import brain from './app/api/brain/router';
 import BullBoard from 'bull-board';
 import Queue from './app/lib/Queue';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
+
 BullBoard.setQueues(Queue.queues.map(queue => queue.bull));
 
 app.use(express.json());
