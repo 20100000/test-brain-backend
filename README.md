@@ -64,13 +64,16 @@ http://localhost:3000/brain
 
 Consutar todos
 <pre>
-    http://localhost:3000/brain/
+GET
+http://localhost:3000/brain/
 </pre>
 Consutar por id
 <pre>
-    http://localhost:3000/brain/1
+GET
+http://localhost:3000/brain/1
 </pre>
 Consutar monitoramento que o crawler encontro 
 <pre>
-    http://localhost:3000/brain/monitoramento/3
+GET
+http://localhost:3000/brain/monitoramento/3
 </pre>
