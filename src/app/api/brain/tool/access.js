@@ -41,4 +41,3 @@ const _getHtmlData = async (formData) => {
 
 module.exports.getAcesso = _getAcesso;
 module.exports.getHtmlData = _getHtmlData;
-

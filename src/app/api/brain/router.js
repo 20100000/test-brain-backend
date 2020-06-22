@@ -15,13 +15,13 @@ const libs = {
 const router = express.Router();
 
 const controller = Controller.getController(libs, queries);
-
+//apf rural
 router.post('/', controller.setData);
 router.get('/:id', controller.getDataId);
 router.get('/', controller.getDataAll);
 //Monitoramento
 router.get('/monitoramento/:id', controller.getDataMonitoring);
-
+//teste rapido
 router.get('/teste/:cpf',controller.setDataNow)
 
 module.exports = { path: PATH, router };

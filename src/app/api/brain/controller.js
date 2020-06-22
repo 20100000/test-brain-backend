@@ -20,7 +20,6 @@ const _setData = async (req, res, next) => {
 
 const _getDataId = async (req, res, next, database, queries) => {
     let conn = null;
-    //result.insertId
     try{
 
         const id = req.params.id;
@@ -35,7 +34,6 @@ const _getDataId = async (req, res, next, database, queries) => {
         res.status(400);
         return res.send(JSON.stringify({success: false, error: 'erro'}));
     } finally {
-
         database.closeConn(conn);
     }
 
@@ -55,7 +53,6 @@ const _getDataAll = async (req, res, next, database, queries) => {
         res.status(400);
         return res.send(JSON.stringify({success: false, error: 'erro'}));
     } finally {
-
         database.closeConn(conn);
     }
 }
@@ -74,7 +71,6 @@ const _getDataMonitoring = async (req, res, next, database, queries) => {
         res.status(400);
         return res.send(JSON.stringify({success: false, error: 'erro'}));
     } finally {
-
         database.closeConn(conn);
     }
 }

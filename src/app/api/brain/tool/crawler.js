@@ -13,7 +13,6 @@ const _getAcessoCrawler = (htmlBody) => {
     return obj;
 };
 
-
 const _getReturnData = (htmlBody) => {
     const $ = cheerio.load(htmlBody);
     let response = [];
@@ -43,8 +42,8 @@ const _getReturnData = (htmlBody) => {
         response.push(obj);
     })
     return response;
-
 }
+
 module.exports.getAcessoCrawler = _getAcessoCrawler;
 module.exports.getReturnData = _getReturnData;
 
