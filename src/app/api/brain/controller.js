@@ -1,5 +1,5 @@
 // import registrationDoc from '../jobs/registrationDoc';
-import Queue from '../lib/Queue';
+import Queue from '../../lib/Queue';
 import access from "./tool/access";
 import crawler from "./tool/crawler";
 import submitDatabase from "./tool/subimitDatabase";

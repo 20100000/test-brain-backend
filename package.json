@@ -1,12 +1,13 @@
 {
-  "name": "queuenode",
+  "name": "teste_crawker_com_queue",
+  "author": "Tiago Honorio Matos Da Silva",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "npm-run-all -p dev:*",
-    "dev:server": "nodemon src/server.js",
-    "dev:queue": "nodemon src/queue.js"
+    "go": "npm-run-all -p go:*",
+    "go:server": "nodemon src/server.js",
+    "go:queue": "nodemon src/queue.js"
   },
   "dependencies": {
     "bull": "^3.11.0",

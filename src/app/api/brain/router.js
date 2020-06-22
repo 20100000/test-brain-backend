@@ -1,6 +1,6 @@
 import express from 'express';
 import Controller from './controller';
-import database from '../lib/database';
+import database from '../../lib/database';
 import queries from './tool/queries'
 
 const PATH = '/brain';

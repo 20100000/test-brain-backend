@@ -1,6 +1,6 @@
-import access from "../brain/tool/access";
-import crawler from "../brain/tool/crawler";
-import submitDatabase from "../brain/tool/subimitDatabase";
+import access from "../api/brain/tool/access";
+import crawler from "../api/brain/tool/crawler";
+import submitDatabase from "../api/brain/tool/subimitDatabase";
 
 export default {
     key: 'registrationDoc',
