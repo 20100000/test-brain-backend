@@ -50,6 +50,7 @@ Em src/common/config.js configure database valores padrão.<br>
 <h4>Rotas APIs</h4>
 Monitoramento da fila
 <pre>
+GET
 http://localhost:3000/dashboard/queues
 </pre>
 
