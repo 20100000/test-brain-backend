@@ -1,214 +1,94 @@
-create table apf_rural
-(
-    id          int(20) unsigned auto_increment
-        primary key,
-    doc         varchar(50) null,
-    status      int(1)      null,
-    data_insert datetime    null
-);
-
-create index idx_apf_rural
-    on apf_rural (id);
-
-create table monitoramentos
-(
-    id               int auto_increment
-        primary key,
-    imovel           varchar(100) null,
-    car              varchar(100) null,
-    responsavel      varchar(100) null,
-    atividade        varchar(100) null,
-    municipio        varchar(100) null,
-    data_emissao     varchar(20)  null,
-    data_validade    varchar(20)  null,
-    data_atualizacao varchar(20)  null,
-    id_apf_rural     int          null
-);
-
-create index idx_mon
-    on monitoramentos (id);
-
-create view information_schema.CHARACTER_SETS as -- missing source code
-;
-
-create view information_schema.COLLATIONS as -- missing source code
-;
-
-create view information_schema.COLLATION_CHARACTER_SET_APPLICABILITY as -- missing source code
-;
-
-create view information_schema.COLUMNS as -- missing source code
-;
-
-create view information_schema.COLUMN_PRIVILEGES as -- missing source code
-;
-
-create view information_schema.ENGINES as -- missing source code
-;
-
-create view information_schema.EVENTS as -- missing source code
-;
-
-create view information_schema.FILES as -- missing source code
-;
-
-create view information_schema.GLOBAL_STATUS as -- missing source code
-;
-
-create view information_schema.GLOBAL_VARIABLES as -- missing source code
-;
-
-create view information_schema.INNODB_BUFFER_PAGE as -- missing source code
-;
-
-create view information_schema.INNODB_BUFFER_PAGE_LRU as -- missing source code
-;
-
-create view information_schema.INNODB_BUFFER_POOL_STATS as -- missing source code
-;
-
-create view information_schema.INNODB_CMP as -- missing source code
-;
-
-create view information_schema.INNODB_CMPMEM as -- missing source code
-;
-
-create view information_schema.INNODB_CMPMEM_RESET as -- missing source code
-;
-
-create view information_schema.INNODB_CMP_PER_INDEX as -- missing source code
-;
-
-create view information_schema.INNODB_CMP_PER_INDEX_RESET as -- missing source code
-;
-
-create view information_schema.INNODB_CMP_RESET as -- missing source code
-;
-
-create view information_schema.INNODB_FT_BEING_DELETED as -- missing source code
-;
-
-create view information_schema.INNODB_FT_CONFIG as -- missing source code
-;
-
-create view information_schema.INNODB_FT_DEFAULT_STOPWORD as -- missing source code
-;
-
-create view information_schema.INNODB_FT_DELETED as -- missing source code
-;
-
-create view information_schema.INNODB_FT_INDEX_CACHE as -- missing source code
-;
-
-create view information_schema.INNODB_FT_INDEX_TABLE as -- missing source code
-;
-
-create view information_schema.INNODB_LOCKS as -- missing source code
-;
-
-create view information_schema.INNODB_LOCK_WAITS as -- missing source code
-;
-
-create view information_schema.INNODB_METRICS as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_COLUMNS as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_DATAFILES as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_FIELDS as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_FOREIGN as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_FOREIGN_COLS as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_INDEXES as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_TABLES as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_TABLESPACES as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_TABLESTATS as -- missing source code
-;
-
-create view information_schema.INNODB_SYS_VIRTUAL as -- missing source code
-;
-
-create view information_schema.INNODB_TEMP_TABLE_INFO as -- missing source code
-;
-
-create view information_schema.INNODB_TRX as -- missing source code
-;
-
-create view information_schema.KEY_COLUMN_USAGE as -- missing source code
-;
-
-create view information_schema.OPTIMIZER_TRACE as -- missing source code
-;
-
-create view information_schema.PARAMETERS as -- missing source code
-;
-
-create view information_schema.PARTITIONS as -- missing source code
-;
-
-create view information_schema.PLUGINS as -- missing source code
-;
-
-create view information_schema.PROCESSLIST as -- missing source code
-;
-
-create view information_schema.PROFILING as -- missing source code
-;
-
-create view information_schema.REFERENTIAL_CONSTRAINTS as -- missing source code
-;
-
-create view information_schema.ROUTINES as -- missing source code
-;
-
-create view information_schema.SCHEMATA as -- missing source code
-;
-
-create view information_schema.SCHEMA_PRIVILEGES as -- missing source code
-;
-
-create view information_schema.SESSION_STATUS as -- missing source code
-;
-
-create view information_schema.SESSION_VARIABLES as -- missing source code
-;
-
-create view information_schema.STATISTICS as -- missing source code
-;
-
-create view information_schema.TABLES as -- missing source code
-;
-
-create view information_schema.TABLESPACES as -- missing source code
-;
-
-create view information_schema.TABLE_CONSTRAINTS as -- missing source code
-;
-
-create view information_schema.TABLE_PRIVILEGES as -- missing source code
-;
-
-create view information_schema.TRIGGERS as -- missing source code
-;
-
-create view information_schema.USER_PRIVILEGES as -- missing source code
-;
-
-create view information_schema.VIEWS as -- missing source code
-;
-
-
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 22-Jun-2020 às 15:37
+-- Versão do servidor: 10.4.6-MariaDB
+-- versão do PHP: 7.3.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `brain`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `apf_rural`
+--
+
+CREATE TABLE `apf_rural` (
+  `id` int(20) UNSIGNED NOT NULL,
+  `doc` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` int(1) DEFAULT NULL,
+  `data_insert` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `monitoramentos`
+--
+
+CREATE TABLE `monitoramentos` (
+  `id` int(11) NOT NULL,
+  `imovel` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `car` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `responsavel` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `atividade` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `municipio` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `data_emissao` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `data_validade` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `data_atualizacao` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `id_apf_rural` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `apf_rural`
+--
+ALTER TABLE `apf_rural`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_apf_rural` (`id`);
+
+--
+-- Índices para tabela `monitoramentos`
+--
+ALTER TABLE `monitoramentos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_mon` (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `apf_rural`
+--
+ALTER TABLE `apf_rural`
+  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `monitoramentos`
+--
+ALTER TABLE `monitoramentos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
