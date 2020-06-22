@@ -7,8 +7,11 @@ const _submitMonitoramento = async (responseData, doc) => {
     }
     const conn = await database.getConnection(true);
     const searchDoc = await database.execute(conn, queries.QSelectDoc, [doc]);
+    let appRural;
     if (searchDoc[0].cont  == 0) {
-        const appRural = await database.execute(conn, queries.QInsertApfRural, [doc]);
+         appRural = await database.execute(conn, queries.QInsertApfRural, [doc]);
+    } else {
+
         if(responseData.length){
             let dataSet = [];
             responseData.forEach(function(item){
@@ -19,7 +22,6 @@ const _submitMonitoramento = async (responseData, doc) => {
 
             await database.execute(conn, queries.QInsertMonitoramento, dataSet);
         }
-
     }
 }
 
