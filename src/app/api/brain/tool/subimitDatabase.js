@@ -13,7 +13,7 @@ const _submitMonitoramento = async (responseData, doc) => {
          appRural = await database.execute(conn, queries.QInsertApfRural, [doc]);
          id = appRural.insertId
     } else {
-        appRural =  await database.execute(conn, queries.QSelectIdForUser, [doc]);
+        appRural =  await database.execute(conn, queries.QSelectIdRural, [doc]);
         id = appRural[0].id
 
     }
