@@ -38,6 +38,10 @@ Rode o contener na porta 6379 é a porta padrão.<br/>
 <pre>
     yarn go
 </pre>
+ou
+<pre>
+    npm run go
+</pre>
 <h4>5̣° Banco de dados</h4>
 Na raiz do projeto importar database brain.sql, execute mysql na porta 3306 ex: jdbc:mysql://localhost:3306/ <br>
 Em src/common/config.js configure database valores padrão.<br>
