@@ -33,7 +33,7 @@ const _submitMonitoramento = async (responseData, doc) => {
     }catch (e) {
         console.log('Erro', e)
     }finally {
-        database.closeConn(conn);apf_rural
+        database.closeConn(conn);
 
     }
 }
