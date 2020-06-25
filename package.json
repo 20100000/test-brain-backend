@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "go": "npm-run-all -p go:*",
-    "go:server": "nodemon src/server.js",
+    "go:server": "nodemon src/app.js",
     "go:queue": "nodemon src/queue.js"
   },
   "dependencies": {

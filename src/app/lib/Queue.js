@@ -14,7 +14,7 @@ export default {
   queues,
   add(name, data) {
     const queue = this.queues.find(queue => queue.name === name);
-    
+    queue.options = { delay: 5000};
     return queue.bull.add(data, queue.options);
   },
   process() {
