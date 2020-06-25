@@ -32,7 +32,6 @@ const _submitMonitoramento = async (responseData, doc) => {
             await database.execute(conn, queries.QInsertMonitoramento, dataSet);
         }
     }catch (e) {
-        console.log('Erro', e)
     }finally {
         database.closeConn(conn);
 
