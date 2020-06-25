@@ -29,6 +29,7 @@ const _submitMonitoramento = async (responseData, doc) => {
                 dataSet.push(itemArray);
             });
 
+            await database.execute(conn, queries.QInsertMonitoramento, dataSet);
         }
     }catch (e) {
         console.log('Erro', e)
