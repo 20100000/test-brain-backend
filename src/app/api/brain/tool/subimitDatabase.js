@@ -28,6 +28,7 @@ const _submitMonitoramento = async (responseData, doc) => {
 
             await database.execute(conn, queries.QInsertMonitoramento, dataSet);
     }
+    database.closeConn();
 }
 
 module.exports.submitMonitoramento =_submitMonitoramento
