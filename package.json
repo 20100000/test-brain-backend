@@ -17,7 +17,7 @@
     "cheerio": "^1.0.0-rc.3",
     "mysql": "github:mysqljs/mysql",
     "cors": "^2.8.5",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "request": "^2.88.0"
   },
   "devDependencies": {
